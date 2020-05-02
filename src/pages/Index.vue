@@ -2,7 +2,7 @@
   <q-layout>
     <q-header elevated style="background-color: #1c1b21">
       <q-toolbar>
-        <q-toolbar-title :style="'color:'+theme_color">
+        <q-toolbar-title class="text-weight-bold text-italic" :style="'color:'+theme_color">
           Quasar App
         </q-toolbar-title>
 
@@ -62,7 +62,7 @@
         </q-carousel>
         <div class="row">
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-            <q-card class="q-pa-lg flex flex-center text-center box-shadow" style="margin: 40px;">
+            <q-card class="q-pa-sm flex flex-center text-center box-shadow" style="margin: 40px;">
 
 
               <q-card-section>
@@ -78,7 +78,7 @@
             </q-card>
           </div>
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-            <q-card class="q-pa-lg flex flex-center text-center box-shadow" style="margin: 40px;">
+            <q-card class="q-pa-sm flex flex-center text-center box-shadow" style="margin: 40px;">
 
 
               <q-card-section>
@@ -94,7 +94,7 @@
             </q-card>
           </div>
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-            <q-card class="q-pa-lg flex flex-center text-center box-shadow" style="margin: 40px;">
+            <q-card class="q-pa-sm flex flex-center text-center box-shadow" style="margin: 40px;">
 
 
               <q-card-section>
@@ -111,7 +111,7 @@
           </div>
 
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-            <q-card class="q-pa-lg flex flex-center text-center box-shadow" style="margin: 40px;">
+            <q-card class="q-pa-sm flex flex-center text-center box-shadow" style="margin: 40px;">
 
 
               <q-card-section>
@@ -127,12 +127,8 @@
             </q-card>
           </div>
         </div>
-        <q-parallax :speed="0.5">
-
-          <template v-slot:media>
-            <img src="/statics/images/parallax.jpg">
-          </template>
-          <div class="full-width full-height flex flex-center" style="background-color: #000000ad !important;">
+        <div class="quote">
+          <div class="q-pt-xl full-width full-height flex flex-center" style="background-color: #000000ad !important;">
             <h3 class="text-white text-center">Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do
               eiusmod tempor incididunt ut <br> labore et dolore magna aliqua.
               <br>
@@ -141,7 +137,7 @@
                      :style="'background:'+ theme_color +'; color: white'" label="Support Me"/>
             </h3>
           </div>
-        </q-parallax>
+        </div>
         <div style="background: #f7f7f7">
           <br>
           <div class="row">
@@ -156,7 +152,7 @@
           <div class="row text-center" style="padding-bottom: 99px">
             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
               <div style="line-height:0">
-                <span v-for="index in 6">
+                <span v-for="index in 6" :key="index">
                   <q-flashcard :no-hover="hover" :style="style">
                     <q-flashcard-section transition="nudge-in" :active="active">
                       <img :src="'/statics/images/'+index+'.jpg'" width=340 height=263>
@@ -247,6 +243,88 @@
         <div style="background: #f7f7f7">
           <div class="row">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+              <h5 class="text-center">Our Services
+                <br>
+                <span
+                  class="text-center text-grey text-h6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              </h5>
+            </div>
+          </div> 
+          <div class="q-pa-xl">       
+            <div class="row q-col-gutter-sm ">
+              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                <q-item class="q-pa-none q-ml-xs ">
+                  <q-item-section side :style="'background-color:' + theme_color" class="q-pa-sm q-mr-none text-white">
+                    <q-icon name="compare_arrows" size="65px"></q-icon>
+                  </q-item-section>
+                  <q-item-section class="q-pa-md q-ml-none">
+                    <q-item-label class="text-h6 text-grey-9 text-uppercase">Blockchain</q-item-label>
+                    <q-item-label class="text-grey-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
+              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                <q-item class="q-pa-none q-ml-xs">
+                  <q-item-section side :style="'background-color:' + theme_color" class="q-pa-sm q-mr-none text-white">
+                    <q-icon name="web" size="65px"></q-icon>
+                  </q-item-section>
+                  <q-item-section class="q-pa-md q-ml-none">
+                    <q-item-label class="text-h6 text-grey-9 text-uppercase">Web Design</q-item-label>
+                    <q-item-label class="text-grey-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
+              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                <q-item class="q-pa-none q-ml-xs q-mr-xs">
+                  <q-item-section side :style="'background-color:' + theme_color" class="q-pa-sm q-mr-none text-white">
+                    <q-icon name="fab fa-wordpress" size="65px"></q-icon>
+                  </q-item-section>
+                  <q-item-section class="q-pa-md q-ml-none">
+                    <q-item-label class="text-h6 text-grey-9 text-uppercase">Wordpress</q-item-label>
+                    <q-item-label class="text-grey-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
+            </div>
+            <div class="row q-col-gutter-sm q-mt-lg">
+              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                <q-item class="q-pa-none q-ml-xs ">
+                  <q-item-section side :style="'background-color:' + theme_color" class="q-pa-sm q-mr-none text-white">
+                    <q-icon name="settings" size="65px"></q-icon>
+                  </q-item-section>
+                  <q-item-section class="q-pa-md q-ml-none">
+                    <q-item-label class="text-h6 text-grey-9 text-uppercase">DevOps</q-item-label>
+                    <q-item-label class="text-grey-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
+              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                <q-item class="q-pa-none q-ml-xs">
+                  <q-item-section side :style="'background-color:' + theme_color" class="q-pa-sm q-mr-none text-white">
+                    <q-icon name="fas fa-database" size="65px"></q-icon>
+                  </q-item-section>
+                  <q-item-section class="q-pa-md q-ml-none">
+                    <q-item-label class="text-h6 text-grey-9 text-uppercase">Big Data</q-item-label>
+                    <q-item-label class="text-grey-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
+              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                <q-item class="q-pa-none q-ml-xs q-mr-xs">
+                  <q-item-section side :style="'background-color:' + theme_color" class="q-pa-sm q-mr-none text-white">
+                    <q-icon name="dynamic_feed" size="65px"></q-icon>
+                  </q-item-section>
+                  <q-item-section class="q-pa-md q-ml-none">
+                    <q-item-label class="text-h6 text-grey-9 text-uppercase">AI</q-item-label>
+                    <q-item-label class="text-grey-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
+            </div>
+          </div>          
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
               <h5 class="text-center">Our Team
                 <br>
                 <span
@@ -262,15 +340,16 @@
               transition-next="slide-left"
               swipeable
               animated
+              autoplay
               control-color="primary"
               navigation
               padding
               height="300px"
               class="rounded-borders"
             >
-              <q-carousel-slide v-for="val in [1,2,3]" :name="val" style="background: #f7f7f7" class="column no-wrap">
+              <q-carousel-slide v-for="val in [1,2,3]" :key="val" :name="val" style="background: #f7f7f7" class="column no-wrap">
                 <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
-                  <span v-for="index in 4">
+                  <span v-for="index in 4" :key="index">
                   <q-flashcard :no-hover="hover" :style="team_style">
                     <q-flashcard-section transition="['nudge-out', 'fade-out']" :active="active">
                       <img :src="'/statics/images/team_'+index+'.jpg'" width=260 height=263>
@@ -296,8 +375,7 @@
               </q-carousel-slide>
             </q-carousel>
             </div>
-          </div>
-        </div>
+          </div>       
       </q-page>
     </q-page-container>
   </q-layout>
@@ -317,11 +395,11 @@
             return {
                 slide: 1,
                 team_slide: 1,
-                bg_color: 'rgb(0, 123, 245)',
+                bg_color: 'rgb(0, 163, 82)',
                 hover: false,
                 active: false,
-                theme_color: 'rgb(0, 123, 245)',
-                background_style: 'background-color:rgba(0, 123, 245, 0.7);',
+                theme_color: 'rgb(0, 163, 82)',
+                background_style: 'background-color:rgba(0, 163, 82, 0.7);',
                 about_heading_1: [],
                 about_heading_2: [],
                 about_heading_3: [],
@@ -458,5 +536,11 @@
       line-height: normal
       font-family: Georgia, serif
       font-style: italic
+    .quote
+      background: url(/statics/images/parallax.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
 </style>
 
