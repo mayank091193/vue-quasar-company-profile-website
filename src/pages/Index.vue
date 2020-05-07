@@ -1,13 +1,17 @@
 <template>
-  <q-layout>
-    <q-header elevated style="background-color: #1c1b21">
-      <q-toolbar>
-        <q-toolbar-title class="text-weight-bold text-italic" :style="'color:'+theme_color">
-          Quasar App
-        </q-toolbar-title>
-
-        <div>
-          <q-btn :style="'background:'+ theme_color +'; color: white'" class="q-ma-xs" dense icon="color_lens">
+  <q-layout view="lHh lpr lFf">
+    <q-header class="q-py-sm" style="background-color: #1c1b21">
+        <q-toolbar>
+        <span class="text-h6 q-mr-md">Homepage</span>
+        <q-space ></q-space>
+      <q-tabs v-model="selected_tab" shrink>
+        <q-tab :style= "[selected_tab == 't_0' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_portfolio');" style="width:120px;min-height:auto !important;color: white" label="Portfolio" />
+        <q-tab :style= "[selected_tab == 't_1' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_about_us');" style="width:120px;min-height:auto !important;color: white" label="About Us" />
+        <q-tab :style= "[selected_tab == 't_2' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_services');" style="width:120px;min-height:auto !important;color: white" label="Services" />
+        <q-tab :style= "[selected_tab == 't_3' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_pricing');" style="width:120px;min-height:auto !important;color: white" label="Pricing" />
+        <q-tab :style= "[selected_tab == 't_4' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_team');" style="width:120px;min-height:auto !important;color: white" label="Team" />
+        <q-tab :style= "[selected_tab == 't_5' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_testimonial');" style="min-height:auto !important;color: white" label="Testimonial" />
+        <q-btn class="q-mr-md" size="12px" :style="'min-height:auto !important;background:'+ theme_color +'; color: white; padding:1px'" dense icon="color_lens">
             <q-tooltip transition-show="flip-right"
                        transition-hide="flip-left" self="center left" anchor="center right">Theme color
             </q-tooltip>
@@ -23,7 +27,10 @@
               />
             </q-menu>
           </q-btn>
-        </div>
+          <a style="font-size: 25px;" class="float-right q-mr-sm" href="https://github.com/sponsors/mayank091193"
+           target="_blank" title="Donate"><i class="fas fa-heart" style="color: #eb5daa"></i></a>
+      </q-tabs>
+        
       </q-toolbar>
     </q-header>
     <q-page-container>
@@ -138,7 +145,7 @@
             </h3>
           </div>
         </div>
-        <div style="background: #f7f7f7">
+        <div style="background: #f7f7f7" id="id_portfolio">
           <br>
           <div class="row">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
@@ -179,7 +186,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="id_about_us">
           <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
             <h5 class="text-center">About Us
               <br>
@@ -240,7 +247,7 @@
         </div>
         <br>
         <br>
-        <div style="background: #f7f7f7">
+        <div style="background: #f7f7f7" id="id_services">
           <div class="row">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
               <h5 class="text-center">Our Services
@@ -323,7 +330,7 @@
             </div>
           </div>          
         </div>
-        <div class="row">
+        <div class="row" id="id_team">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
               <h5 class="text-center">Our Team
                 <br>
@@ -377,7 +384,7 @@
             </q-carousel>
             </div>
           </div>          
-          <div class="pricing">
+          <div class="pricing" id="id_pricing">
           <div class="" style="background-color: #000000ad !important;">
           <div class="row">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
@@ -549,6 +556,56 @@
         <br>
         <br>
         </div></div>
+<div class="quote" id="id_testimonial">
+<div style="background-color: #000000ad !important;">
+<q-carousel
+      v-model="review_slide"
+      swipeable
+      animated
+      infinite
+      autoplay
+      arrows
+      navigation
+      padding
+      navigation-position="bottom"
+      class="text-white bg-transparent q-mx-xl"
+    >
+      <q-carousel-slide style="padding-bottom: 140px" name="style" class="column no-wrap flex-center">
+        <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_1.jpg" width=150 height=150>
+	<div class="q-mt-md text-h6 text-center">
+	   <span :style="'color:'+theme_color">John Doe</span><br><span class="text-overline">Organization Founder</span>
+	</div>
+        <div class="q-mt-md text-h6 text-center">
+          Lorem ipsum dolor sit amet, consectetur
+adipiscing elit, sed do eiusmod tempor incididunt ut<br>
+labore et dolore magna aliqua.
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide style="padding-bottom: 140px" name="tv" class="column no-wrap flex-center">
+        <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_2.jpg" width=150 height=150>
+	<div class="q-mt-md text-h6 text-center">
+	   <span :style="'color:'+theme_color">John Doe</span><br><span class="text-overline">Lead Developer</span>
+	</div>
+        <div class="q-mt-md text-h6 text-center">
+          Lorem ipsum dolor sit amet, consectetur
+adipiscing elit, sed do eiusmod tempor incididunt ut<br>
+labore et dolore magna aliqua.
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide style="padding-bottom: 140px" name="layers" class="column no-wrap flex-center">
+        <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_3.jpg" width=150 height=150>
+	<div class="q-mt-md text-h6 text-center">
+	   <span :style="'color:'+theme_color">John Doe</span><br><span class="text-overline">Product Owner</span>
+	</div>
+        <div class="q-mt-md text-h6 text-center">
+          Lorem ipsum dolor sit amet, consectetur
+adipiscing elit, sed do eiusmod tempor incididunt ut<br>
+labore et dolore magna aliqua.
+        </div>
+      </q-carousel-slide>
+    </q-carousel>
+</div>
+</div>
       </q-page>
     </q-page-container>
   </q-layout>
@@ -557,6 +614,9 @@
 <style src="@quasar/quasar-ui-qflashcard/dist/index.css"></style>
 
 <script>
+  import { scroll } from 'quasar'
+  const { getScrollTarget, setScrollPosition } = scroll
+    
     import {QFlashcard, QFlashcardSection} from '@quasar/quasar-ui-qflashcard'
 
     export default {
@@ -567,6 +627,8 @@
         data() {
             return {
                 slide: 1,
+		            review_slide: 'style',
+                selected_tab: 't_0',
                 team_slide: 1,
                 bg_color: 'rgb(0, 163, 82)',
                 hover: false,
@@ -604,6 +666,13 @@
             }
         },
         methods: {
+          scrollToElement (id) {
+            let el = document.getElementById(id)
+            const target = getScrollTarget(el)
+            const offset = el.offsetTop
+            const duration = 900
+            setScrollPosition(target, offset, duration)
+          },
             changeBgColor() {
                 this.theme_color = this.bg_color;
                 this.background_style = 'background-color:' + this.bg_color.split(')')[0] + ',0.7)';
@@ -709,17 +778,22 @@
       line-height: normal
       font-family: Georgia, serif
       font-style: italic
+    
     .quote
       background: url(/statics/images/parallax.jpg);
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
+    
     .pricing
       background: url(/statics/images/pricing.jpg);
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
+    
+    .q-tab--active .q-tab__indicator
+      display: none !important;
 </style>
 

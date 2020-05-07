@@ -2,7 +2,7 @@
   "name": "vue-quasar-company-profile-website",
   "version": "0.0.1",
   "description": "Free template for office website.",
-  "productName": "Office Website Using Quasar",
+  "productName": "Company Profile Website Using Quasar",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "Mayank Patel",
