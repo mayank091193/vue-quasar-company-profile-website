@@ -1,16 +1,17 @@
 <template>
   <q-layout view="lHh lpr lFf">
-    <q-header class="q-py-sm" style="background-color: #1c1b21">
+    <q-header class="q-py-sm" style="background-color: #1c1b21;" :style="'border-bottom: 2px solid '+ theme_color">
         <q-toolbar>
-        <span class="text-h6 q-mr-md">Homepage</span>
+        <span :style="'font-size: 35px;color:'+theme_color" class="my-font text-h6 q-mr-md">Kudos</span>
         <q-space ></q-space>
       <q-tabs v-model="selected_tab" shrink>
-        <q-tab :style= "[selected_tab == 't_0' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_portfolio');" style="width:120px;min-height:auto !important;color: white" label="Portfolio" />
-        <q-tab :style= "[selected_tab == 't_1' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_about_us');" style="width:120px;min-height:auto !important;color: white" label="About Us" />
-        <q-tab :style= "[selected_tab == 't_2' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_services');" style="width:120px;min-height:auto !important;color: white" label="Services" />
-        <q-tab :style= "[selected_tab == 't_3' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_pricing');" style="width:120px;min-height:auto !important;color: white" label="Pricing" />
-        <q-tab :style= "[selected_tab == 't_4' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_team');" style="width:120px;min-height:auto !important;color: white" label="Team" />
-        <q-tab :style= "[selected_tab == 't_5' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs rounded-borders" @click="scrollToElement('id_testimonial');" style="min-height:auto !important;color: white" label="Testimonial" />
+        <q-tab :style= "[selected_tab == 't_0' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_portfolio');" style="width:120px;min-height:auto !important;color: white" label="Portfolio" />
+        <q-tab :style= "[selected_tab == 't_1' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_about_us');" style="width:120px;min-height:auto !important;color: white" label="About Us" />
+        <q-tab :style= "[selected_tab == 't_2' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_services');" style="width:120px;min-height:auto !important;color: white" label="Services" />
+        <q-tab :style= "[selected_tab == 't_3' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_testimonial');" style="min-height:auto !important;color: white" label="Testimonial" />
+        <q-tab :style= "[selected_tab == 't_4' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_team');" style="width:120px;min-height:auto !important;color: white" label="Team" />
+        <q-tab :style= "[selected_tab == 't_5' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_pricing');" style="width:120px;min-height:auto !important;color: white" label="Pricing" />
+	<q-tab :style= "[selected_tab == 't_6' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_news');" style="width:120px;min-height:auto !important;color: white" label="News" />
         <q-btn class="q-mr-md" size="12px" :style="'min-height:auto !important;background:'+ theme_color +'; color: white; padding:1px'" dense icon="color_lens">
             <q-tooltip transition-show="flip-right"
                        transition-hide="flip-left" self="center left" anchor="center right">Theme color
@@ -46,25 +47,34 @@
           control-color="white"
           transition-prev="slide-right"
           transition-next="slide-left"
-          height="693px"
+          height="620px"
         >
-          <q-carousel-slide :name="1" img-src="/statics/images/image_1.jpg">
-            <div class="absolute-bottom custom-caption">
-              <div class="text-h2">First stop</div>
-              <div class="text-subtitle1">Mountains</div>
+          <q-carousel-slide class="q-pa-none" :name="1" img-src="/statics/images/image_1.jpg">
+<div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
+            <div class="custom-caption">
+              <div class="text-h2 main_line animation_2">WELCOME TO <span :style="'color:'+theme_color">KUDOS</span></div><br><br><br>
+              <div class="text-h4 animation_1">The Web as I envisaged it, we have not seen it yet. The future<br> is still so much bigger than the past.</div><br><br><br>
+<q-btn size="md" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
             </div>
+</div>
           </q-carousel-slide>
-          <q-carousel-slide :name="2" img-src="/statics/images/image_2.jpg">
-            <div class="absolute-bottom custom-caption">
-              <div class="text-h2">Second stop</div>
-              <div class="text-subtitle1">Famous City</div>
+          <q-carousel-slide class="q-pa-none":name="2" img-src="/statics/images/image_2.jpg">
+<div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
+            <div class="custom-caption">
+    	      <div class="text-h2 main_line animation_2" style="font-size:65px;">FIRST STOP</div><br><br><br>
+              <div class="text-h4 animation_1">The advance of technology is based on making it fit in so that you <br>don't really even notice it, so it's part of everyday life.</div><br><br><br>
+<q-btn size="md" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
             </div>
+</div>
           </q-carousel-slide>
-          <q-carousel-slide :name="3" img-src="/statics/images/image_3.jpg">
-            <div class="absolute-bottom custom-caption">
-              <div class="text-h2">Third stop</div>
-              <div class="text-subtitle1">Famous Bridge</div>
+          <q-carousel-slide class="q-pa-none":name="3" img-src="/statics/images/image_3.jpg">
+<div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
+            <div class="custom-caption">
+    	      <div class="text-h2 main_line animation_2" style="font-size:65px;">FIRST STOP</div><br><br><br>
+              <div class="text-h4 animation_1">We have to stop optimizing for programmers and <br>start optimizing for users.</div><br><br><br>
+<q-btn size="md" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
             </div>
+</div>
           </q-carousel-slide>
         </q-carousel>
         <div class="row">
@@ -330,6 +340,56 @@
             </div>
           </div>          
         </div>
+<div class="quote" id="id_testimonial">
+<div style="background-color: #000000ad !important;">
+<q-carousel
+      v-model="review_slide"
+      swipeable
+      animated
+      infinite
+      autoplay
+      arrows
+      navigation
+      padding
+      navigation-position="bottom"
+      class="text-white bg-transparent q-mx-xl"
+    >
+      <q-carousel-slide style="padding-bottom: 140px" name="style" class="column no-wrap flex-center">
+        <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_1.jpg" width=150 height=150>
+	<div class="q-mt-md text-h6 text-center">
+	   <span :style="'color:'+theme_color">John Doe</span><br><span class="text-overline">Organization Founder</span>
+	</div>
+        <div class="q-mt-md text-h6 text-center">
+          Lorem ipsum dolor sit amet, consectetur
+adipiscing elit, sed do eiusmod tempor incididunt ut<br>
+labore et dolore magna aliqua.
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide style="padding-bottom: 140px" name="tv" class="column no-wrap flex-center">
+        <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_2.jpg" width=150 height=150>
+	<div class="q-mt-md text-h6 text-center">
+	   <span :style="'color:'+theme_color">John Doe</span><br><span class="text-overline">Lead Developer</span>
+	</div>
+        <div class="q-mt-md text-h6 text-center">
+          Lorem ipsum dolor sit amet, consectetur
+adipiscing elit, sed do eiusmod tempor incididunt ut<br>
+labore et dolore magna aliqua.
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide style="padding-bottom: 140px" name="layers" class="column no-wrap flex-center">
+        <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_3.jpg" width=150 height=150>
+	<div class="q-mt-md text-h6 text-center">
+	   <span :style="'color:'+theme_color">John Doe</span><br><span class="text-overline">Product Owner</span>
+	</div>
+        <div class="q-mt-md text-h6 text-center">
+          Lorem ipsum dolor sit amet, consectetur
+adipiscing elit, sed do eiusmod tempor incididunt ut<br>
+labore et dolore magna aliqua.
+        </div>
+      </q-carousel-slide>
+    </q-carousel>
+</div>
+</div>
         <div class="row" id="id_team">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
               <h5 class="text-center">Our Team
@@ -556,56 +616,90 @@
         <br>
         <br>
         </div></div>
-<div class="quote" id="id_testimonial">
-<div style="background-color: #000000ad !important;">
-<q-carousel
-      v-model="review_slide"
-      swipeable
-      animated
-      infinite
-      autoplay
-      arrows
-      navigation
-      padding
-      navigation-position="bottom"
-      class="text-white bg-transparent q-mx-xl"
-    >
-      <q-carousel-slide style="padding-bottom: 140px" name="style" class="column no-wrap flex-center">
-        <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_1.jpg" width=150 height=150>
-	<div class="q-mt-md text-h6 text-center">
-	   <span :style="'color:'+theme_color">John Doe</span><br><span class="text-overline">Organization Founder</span>
-	</div>
-        <div class="q-mt-md text-h6 text-center">
-          Lorem ipsum dolor sit amet, consectetur
-adipiscing elit, sed do eiusmod tempor incididunt ut<br>
-labore et dolore magna aliqua.
+<div class="row" id="id_news">
+          <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+            <h5 class="text-center">Latest News
+              <br>
+              <span
+                class="text-center text-grey text-h6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            </h5>
+          </div>
         </div>
-      </q-carousel-slide>
-      <q-carousel-slide style="padding-bottom: 140px" name="tv" class="column no-wrap flex-center">
-        <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_2.jpg" width=150 height=150>
-	<div class="q-mt-md text-h6 text-center">
-	   <span :style="'color:'+theme_color">John Doe</span><br><span class="text-overline">Lead Developer</span>
-	</div>
-        <div class="q-mt-md text-h6 text-center">
-          Lorem ipsum dolor sit amet, consectetur
-adipiscing elit, sed do eiusmod tempor incididunt ut<br>
-labore et dolore magna aliqua.
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide style="padding-bottom: 140px" name="layers" class="column no-wrap flex-center">
-        <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_3.jpg" width=150 height=150>
-	<div class="q-mt-md text-h6 text-center">
-	   <span :style="'color:'+theme_color">John Doe</span><br><span class="text-overline">Product Owner</span>
-	</div>
-        <div class="q-mt-md text-h6 text-center">
-          Lorem ipsum dolor sit amet, consectetur
-adipiscing elit, sed do eiusmod tempor incididunt ut<br>
-labore et dolore magna aliqua.
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
+        <div class="row text-center flex flex-center">
+          <div class="col-md-12 col-lg-12 col-sx-12 col-sm-12 q-gutter-md flex flex-center">
+            <div class="col-md-4 col-lg-4 col-sx-12 col-sm-12">
+              <q-card @mouseover="hoverOver(1)" @mouseout="hoverOutTimeout(1)" style="border: none;" class="my-card text-center box-shadow" flat bordered>
+                <q-img
+                  src="/statics/images/about_1.jpg"
+                />
+
+                <q-card-section class="text-left">
+
+                  <div :class="about_heading_1" :style="'color: ' + about_heading_color_1" class="about_heading_1 text-h6 q-mt-sm q-mb-xs">LATEST NEWS 1</div>
+                  <div class="text-caption text-grey-9 q-mt-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </div>
+<div><br>
+<q-btn size="sm" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
 </div>
+                </q-card-section>
+              </q-card>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sx-12 col-sm-12">
+              <q-card @mouseover="hoverOver(2)" @mouseout="hoverOutTimeout(2)" :style="'color: ' + about_heading_color_2" style="border: none;" class="my-card text-center box-shadow" flat bordered>
+                <q-img
+                  src="/statics/images/about_2.jpg"
+                />
+
+                <q-card-section class="text-left">
+
+                  <div :class="about_heading_2" :style="'color: ' + about_heading_color_2" class="text-h6 q-mt-sm q-mb-xs">LATEST NEWS 2</div>
+                  <div class="text-caption text-grey-9 q-mt-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </div>
+<div><br>
+<q-btn size="sm" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
 </div>
+                </q-card-section>
+              </q-card>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sx-12 col-sm-12">
+              <q-card @mouseover="hoverOver(3)" @mouseout="hoverOutTimeout(3)" style="border: none;" class="my-card text-center box-shadow" flat bordered>
+                <q-img
+                  src="/statics/images/about_3.jpg"
+                />
+
+                <q-card-section class="text-left">
+
+                  <div :class="about_heading_3" :style="'color: ' + about_heading_color_3" class="text-h6 q-mt-sm q-mb-xs">LATEST NEWS 3</div>
+                  <div class="text-caption text-grey-9 q-mt-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                  </div>
+<div><br>
+<q-btn size="sm" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
+</div>
+                </q-card-section>
+              </q-card>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <q-toolbar class="flex flex-center text-white" style="background-color: #1c1b21;" :style="'border-top: 2px solid '+ theme_color">
+           <div class="q-pa-sm q-gutter-sm">
+	    <q-btn round type="a" href="https://twitter.com/mayank91193"
+                     :style="'background:'+ theme_color +'; color: white !important;'" icon="fab fa-twitter" />
+	    <q-btn round type="a" href="https://github.com/mayank091193/vue-quasar-company-profile-website"
+                     :style="'background:'+ theme_color +'; color: white !important;'" icon="fab fa-github" />
+            <q-btn round type="a" href="mailto:mayank091193@gmail.com"
+                     :style="'background:'+ theme_color +'; color: white !important;'" icon="email" />
+	    <q-btn round type="a" href="https://github.com/sponsors/mayank091193"
+                     :style="'background:'+ theme_color +'; color: white !important;'" glossy text-color="black" icon="fas fa-heart" />
+	  </div>
+        </q-toolbar>
+
       </q-page>
     </q-page-container>
   </q-layout>
@@ -669,7 +763,7 @@ labore et dolore magna aliqua.
           scrollToElement (id) {
             let el = document.getElementById(id)
             const target = getScrollTarget(el)
-            const offset = el.offsetTop
+            const offset = el.offsetTop + 3
             const duration = 900
             setScrollPosition(target, offset, duration)
           },
@@ -692,11 +786,28 @@ labore et dolore magna aliqua.
 </script>
 
 <style lang="sass" scoped>
+    .main_line
+      font-size: 75px;
+      letter-spacing: 5px;
+      line-height: 50px;
+      font-weight: 600;
+
     .custom-caption
-      text-align: center
-      padding: 12px
-      color: white
-      background-color: rgba(0, 0, 0, .3)
+      text-align: center;
+      padding: 12px;
+      color: white;
+
+    .animation_1
+      -webkit-animation: bounceIn 1s ease-in 800ms both;
+      animation: bounceIn 1s ease-in 800ms both;
+
+    .animation_2
+      -webkit-animation: flipInX 2s ease-in-out 800ms both;
+      animation: flipInX 1s ease-in-out 800ms both;
+
+    .animation_3
+      -webkit-animation: lightSpeedIn 1s ease-in 800ms both;
+      animation: lightSpeedIn 1s ease-in 800ms both;
 
     .description
       padding: 10px
@@ -792,8 +903,8 @@ labore et dolore magna aliqua.
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
-    
-    .q-tab--active .q-tab__indicator
-      display: none !important;
+
+    .custom_tab
+      width: 130px;
 </style>
 
