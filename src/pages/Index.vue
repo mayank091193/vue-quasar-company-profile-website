@@ -47,7 +47,7 @@
           control-color="white"
           transition-prev="slide-right"
           transition-next="slide-left"
-          height="620px"
+          height="639px"
         >
           <q-carousel-slide class="q-pa-none" :name="1" img-src="/statics/images/image_1.jpg">
 <div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
@@ -64,7 +64,7 @@
 <div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
             <div class="custom-caption">
     	      <div class="text-h2 main_line animation_2" style="font-size:65px;"><span :style="'color:'+theme_color">KUDOS</span> FOR THE BEST</div><br><br><br>
-              <div class="text-h4 animation_1">The advance of technology is based on making it fit in so that you <br>don't really even notice it, so it's part of everyday life.</div><br><br><br>
+              <div class="text-h4 animation_1">A man who dares to waste one hour of time has <br>not discovered the value of life.</div><br><br><br>
 <div class="animation_2">
 <q-btn size="md" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
 </div>
@@ -705,7 +705,7 @@ labore et dolore magna aliqua.
 </div>
 <div class="row text-center flex flex-center q-pb-lg">
 
-<div class="col-md-6 col-lg-6 col-sx-12 col-sm-12 q-gutter-lg q-px-xl q-pb-lg q-ma-none">
+<div class="col-md-6 col-lg-6 col-sx-12 col-sm-12 q-gutter-lg q-px-xl q-pb-none q-ma-none">
 	      <q-input bg-color="white" outlined label="Your Name *">
 		<template v-slot:append>
 		  <q-icon name="event" :style="'color:' + theme_color" />
@@ -722,12 +722,15 @@ labore et dolore magna aliqua.
 		</template>
 	      </q-input>
 </div>
-<div class="col-md-6 col-lg-6 col-sx-12 col-sm-12 q-px-xl q-gutter-lg q-ma-none">
-<q-input class="q-pa-none q-ma-none" type="textarea" bg-color="white" outlined label="Your Message *">
+<div class="col-md-6 col-lg-6 col-sx-12 col-sm-12 q-gutter-lg q-px-xl q-pb-none q-ma-none">
+<q-input class="" type="textarea" bg-color="white" outlined label="Your Message *">
+<template v-slot:append>
+		  <q-icon name="event" :style="'color:' + theme_color" />
+		</template>
 	      </q-input>
 </div>
 </div>
-<div class="row flex flex-center text-center q-pb-xl">
+<div class="row flex flex-center text-center q-pb-xl q-mt-md">
 <div class="col-md-12 col-lg-12 col-sx-12 col-sm-12">
 <q-btn size="lg" :style="'background:'+ theme_color +'; color: white'" label="Send Message"/>
 </div>
@@ -836,7 +839,7 @@ labore et dolore magna aliqua.
     .main_line
       font-size: 75px;
       letter-spacing: 5px;
-      line-height: 70px;
+      line-height: 60px;
       font-weight: 600;
 
     .custom-caption
