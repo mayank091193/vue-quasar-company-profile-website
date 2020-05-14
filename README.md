@@ -26,6 +26,7 @@ Thank you very much!!
 
 ```
 git clone https://github.com/mayank091193/vue-quasar-company-profile-website.git
+```
 
 ## Install the dependencies
 ```bash
