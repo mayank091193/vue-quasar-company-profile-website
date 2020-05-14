@@ -358,7 +358,7 @@
       navigation
       padding
       navigation-position="bottom"
-      class="text-white bg-transparent q-mx-xl"
+      class="text-white full-height bg-transparent q-mx-xl"
     >
       <q-carousel-slide style="padding-bottom: 140px" name="style" class="column no-wrap flex-center">
         <img :style="'margin-top:100px;border-radius:5px;border: 4px solid ' + theme_color" src="/statics/images/team_1.jpg" width=150 height=150>
@@ -406,7 +406,7 @@ labore et dolore magna aliqua.
             </div>
           </div>        
           <div class="row text-center flex flex-center">
-            <div class="col-md-12 col-lg-12 col-sx-12 col-sm-12 q-px-xl">
+            <div class="col-md-12 col-lg-12 col-sx-12 col-sm-12 q-px-xl" style="width:100%;overflow:auto;">
               <q-carousel
               v-model="team_slide"
               transition-prev="slide-right"
@@ -692,7 +692,48 @@ labore et dolore magna aliqua.
         </div>
         <br>
         <br>
+<div class="contact_us" id="id_contact_us">
+<div style="background-color: #000000ad !important;">
+<div class="row" id="id_news">
+  <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+    <h5 class="text-center text-white">Contact Us
+      <br>
+      <span
+        class="text-center text-grey text-h6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </h5>
+  </div>
+</div>
+<div class="row text-center flex flex-center q-pb-lg">
 
+<div class="col-md-6 col-lg-6 col-sx-12 col-sm-12 q-gutter-lg q-px-xl q-pb-lg q-ma-none">
+	      <q-input bg-color="white" outlined label="Your Name *">
+		<template v-slot:append>
+		  <q-icon name="event" :style="'color:' + theme_color" />
+		</template>
+	      </q-input>
+<q-input bg-color="white" outlined label="Your Email *">
+		<template v-slot:append>
+		  <q-icon name="event" :style="'color:' + theme_color" />
+		</template>
+	      </q-input>
+<q-input bg-color="white" outlined label="Your Phone *">
+		<template v-slot:append>
+		  <q-icon name="event" :style="'color:' + theme_color" />
+		</template>
+	      </q-input>
+</div>
+<div class="col-md-6 col-lg-6 col-sx-12 col-sm-12 q-px-xl q-gutter-lg q-ma-none">
+<q-input class="q-pa-none q-ma-none" type="textarea" bg-color="white" outlined label="Your Message *">
+	      </q-input>
+</div>
+</div>
+<div class="row flex flex-center text-center q-pb-xl">
+<div class="col-md-12 col-lg-12 col-sx-12 col-sm-12">
+<q-btn size="lg" :style="'background:'+ theme_color +'; color: white'" label="Send Message"/>
+</div>
+</div>
+</div>
+</div>
         <q-toolbar class="flex flex-center text-white" style="background-color: #1c1b21;" :style="'border-top: 2px solid '+ theme_color">
            <div class="q-pa-sm q-gutter-sm">
 	    <q-btn round type="a" href="https://twitter.com/mayank91193"
@@ -795,7 +836,7 @@ labore et dolore magna aliqua.
     .main_line
       font-size: 75px;
       letter-spacing: 5px;
-      line-height: 50px;
+      line-height: 70px;
       font-weight: 600;
 
     .custom-caption
@@ -909,7 +950,14 @@ labore et dolore magna aliqua.
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
-
+    
+    .contact_us
+      background: url(/statics/images/contact_us.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    
     .custom_tab
       width: 130px;
 </style>
