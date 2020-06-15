@@ -1,6 +1,6 @@
 # Company Profile Website Template - Vue.js & Quasar Framework
 
-Free template for company profile made using Quasar Framework and Vue.js! It is a fully responsive template which you can use for your company or may be for your own portfolio website.
+Free template for company profile made using Quasar Framework and Vue.js! It is a fully responsive template which you can use for your company or maybe for your own portfolio website.
 
 ## Site: [https://quasar-company-profile-template.netlify.app/](https://quasar-company-profile-template.netlify.app/)
 
