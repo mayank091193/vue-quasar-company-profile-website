@@ -2,16 +2,16 @@
   <q-layout view="lHh lpr lFf">
     <q-header class="q-py-sm" style="background-color: #1c1b21;" :style="'border-bottom: 2px solid '+ theme_color">
         <q-toolbar>
-        <span :style="'font-size: 35px;color:'+theme_color" class="my-font text-h6 q-mr-md">Kudos</span>
+        <span :style="'font-size: 35px;color:'+theme_color" class="my-font text-h6 q-mr-md">上海千里风光能源发展有限公司</span>
         <q-space ></q-space>
       <q-tabs v-model="selected_tab" shrink>
-        <q-tab :style= "[selected_tab == 't_0' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_portfolio');" style="width:120px;min-height:auto !important;color: white" label="Portfolio" />
-        <q-tab :style= "[selected_tab == 't_1' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_about_us');" style="width:120px;min-height:auto !important;color: white" label="About Us" />
-        <q-tab :style= "[selected_tab == 't_2' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_services');" style="width:120px;min-height:auto !important;color: white" label="Services" />
-        <q-tab :style= "[selected_tab == 't_3' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_testimonial');" style="min-height:auto !important;color: white" label="Testimonial" />
-        <q-tab :style= "[selected_tab == 't_4' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_team');" style="width:120px;min-height:auto !important;color: white" label="Team" />
-        <q-tab :style= "[selected_tab == 't_5' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_pricing');" style="width:120px;min-height:auto !important;color: white" label="Pricing" />
-	<q-tab :style= "[selected_tab == 't_6' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_news');" style="width:120px;min-height:auto !important;color: white" label="News" />
+        <q-tab :style= "[selected_tab == 't_0' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_portfolio');" style="width:120px;min-height:auto !important;color: white" label="产品" />
+        <q-tab :style= "[selected_tab == 't_1' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_about_us');" style="width:120px;min-height:auto !important;color: white" label="关于我们" />
+        <q-tab :style= "[selected_tab == 't_2' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_services');" style="width:120px;min-height:auto !important;color: white" label="服务" />
+        <q-tab :style= "[selected_tab == 't_3' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_testimonial');" style="min-height:auto !important;color: white" label="合作伙伴" />
+        <q-tab :style= "[selected_tab == 't_4' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_team');" style="width:120px;min-height:auto !important;color: white" label="项目案列" />
+        <!-- <q-tab :style= "[selected_tab == 't_5' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_pricing');" style="width:120px;min-height:auto !important;color: white" label="Pricing" /> -->
+	<q-tab :style= "[selected_tab == 't_6' ? {backgroundColor: theme_color} : {}]" class="q-mr-sm q-py-xs custom_tab" @click="scrollToElement('id_news');" style="width:120px;min-height:auto !important;color: white" label="最新动态" />
         <q-btn class="q-mr-md" size="12px" :style="'min-height:auto !important;background:'+ theme_color +'; color: white; padding:1px'" dense icon="color_lens">
             <q-tooltip transition-show="flip-right"
                        transition-hide="flip-left" self="center left" anchor="center right">Theme color
@@ -28,7 +28,7 @@
               />
             </q-menu>
           </q-btn>
-          <a style="font-size: 25px;" class="float-right q-mr-sm" href="https://github.com/sponsors/mayank091193"
+          <a style="font-size: 25px;" class="float-right q-mr-sm" href=""
            target="_blank" title="Donate"><i class="fas fa-heart" style="color: #eb5daa"></i></a>
       </q-tabs>
         
@@ -52,8 +52,8 @@
           <q-carousel-slide class="q-pa-none" :name="1" img-src="/statics/images/image_1.jpg">
 <div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
             <div class="custom-caption">
-              <div class="text-h2 main_line animation_2">WELCOME TO <span :style="'color:'+theme_color">KUDOS</span></div><br><br><br>
-              <div class="text-h4 animation_1">The Web as I envisaged it, we have not seen it yet. The future<br> is still so much bigger than the past.</div><br><br><br>
+              <div class="text-h2 main_line animation_2">为了<span :style="'color:'+theme_color">碳</span>达峰</div><br><br><br>
+              <div class="text-h4 animation_1">上海电力股份有限公司<br>中建四局工业安装华东公司<br>战略孵化的新能源公司</div><br><br><br>
 <div class="animation_2">
 <q-btn size="md" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
 </div>
@@ -63,8 +63,8 @@
           <q-carousel-slide class="q-pa-none":name="2" img-src="/statics/images/image_2.jpg">
 <div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
             <div class="custom-caption">
-    	      <div class="text-h2 main_line animation_2" style="font-size:65px;"><span :style="'color:'+theme_color">KUDOS</span> FOR THE BEST</div><br><br><br>
-              <div class="text-h4 animation_1">A man who dares to waste one hour of time has <br>not discovered the value of life.</div><br><br><br>
+    	      <div class="text-h2 main_line animation_2" style="font-size:65px;">为了<span :style="'color:'+theme_color">碳</span>中和</div><br><br><br>
+              <div class="text-h4 animation_1">集新能源领域项目投资、技术开发、运维服务于一体的综合能源管理公司</div><br><br><br>
 <div class="animation_2">
 <q-btn size="md" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
 </div>
@@ -74,8 +74,8 @@
           <q-carousel-slide class="q-pa-none":name="3" img-src="/statics/images/image_3.jpg">
 <div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
             <div class="custom-caption">
-    	      <div class="text-h2 main_line animation_2" style="font-size:65px;">THE PATH OF <span :style="'color:'+theme_color">SUCCESS</span></div><br><br><br>
-              <div class="text-h4 animation_1">We have to stop optimizing for programmers and <br>start optimizing for users.</div><br><br><br>
+    	      <div class="text-h2 main_line animation_2" style="font-size:65px;">加入<span :style="'color:'+theme_color">我们</span></div><br><br><br>
+              <div class="text-h4 animation_1">共同推动清洁能源可持续发展</div><br><br><br>
 <div class="animation_2">
 <q-btn size="md" :style="'background:'+ theme_color +'; color: white'" label="READ MORE"/>
 </div>
@@ -165,9 +165,9 @@
           <br>
           <div class="row">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-              <h5 class="text-center">Our Portfolio
+              <h5 class="text-center">产品
                 <br>
-                <span class="text-center text-grey text-h6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</span>
+                <span class="text-center text-grey text-h6">风能、光能、氢能、储能、充电、热能、数字化</span>
               </h5>
             </div>
           </div>
@@ -183,17 +183,15 @@
                     <q-flashcard-section transition="fade-in" class="fit" :active="active">
                       <div class="fit" :style="background_style"></div>
                       <q-flashcard-section transition="drop-down" class="text-center my-header" :active="active">
-                        Profile Title
+                        <div v-html="productdescriptions[index]"></div>
                       </q-flashcard-section>
                       <q-flashcard-section transition="slide-up-in" class="my-text" :active="active">
-                        For beautiful eyes, look for the good in others; for beautiful lips, speak only words of kindness; and for poise, walk with the knowledge that you are never alone.
+                        <div v-html="productDetails[index]"></div>
                       </q-flashcard-section>
-                      <q-flashcard-section transition="fade-in" class="fit flex justify-center items-end q-pb-lg"
+                      <!-- <q-flashcard-section transition="fade-in" class="my-text"
                                            :active="active">
-                        <q-btn class="q-mr-md" :style="'color:'+theme_color" style="background-color:white" round
-                               icon="card_giftcard"/>
-                        <q-btn :style="'color:'+theme_color" style="background-color:white" round icon="link"/>
-                      </q-flashcard-section>
+                        <div v-html="productDetails2[index]"></div>
+                      </q-flashcard-section> -->
                     </q-flashcard-section>
                   </q-flashcard>
                   <br v-if="index==3"/>
@@ -450,7 +448,7 @@ labore et dolore magna aliqua.
             </q-carousel>
             </div>
           </div>          
-          <div class="pricing" id="id_pricing">
+          <!-- <div class="pricing" id="id_pricing">
           <div class="" style="background-color: #000000ad !important;">
           <div class="row">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
@@ -621,7 +619,7 @@ labore et dolore magna aliqua.
         </div>   
         <br>
         <br>
-        </div></div>
+        </div></div> -->
 <div class="row" id="id_news">
           <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
             <h5 class="text-center">Latest News
@@ -759,6 +757,24 @@ labore et dolore magna aliqua.
 
 <script>
   import { scroll } from 'quasar'
+
+  const productdescriptions = {
+    1: "风能类产品方案",
+    2: "光伏类产品方案",
+    3: "氢能类产品方案",
+    4: "储能类产品方案",
+    5: "智能充电站产品",
+    6: "热能类产品方案"
+  };
+  const productDetails = {
+    1: "集中式风力发电:主要在大规模风电场:海面草原、戈壁滩等<br>分散式风力发电:主要在城市建筑、街道照明、公共交通工具、城市景观、公园以及垃圾处理厂等场景。",
+    2: "集中式光伏发电:主要在沙漠、荒原和农田等阳光充足拥有大量太阳光源的场景。<br>分布式光伏发电:用于城市和乡村的建筑和基础设施，如屋顶、立面、车棚、道路和公园等。",
+    3: "氢能源主要有绿氢(如光伏、风电、水电等)、灰氢(天然气、煤炭等化石燃料)等，应用场景分别有:绿氢:主要运用在交通运输、工业领城储能系统、航空航天电力行业等领域，灰氢:主要运用在工业用途、交通运输.能源存储、热能供应等领域。",
+    4: "储能主要有蓄电池储能、氢能储能、超级电容储能、热能储能等，应用场景主要有:能源平滑输出、能源调峰、储备电源、微电网支撑、能源管理、能源市场参与等场景。",
+    5: "智能充电站主要分为公共充电站、目的地充电站、充电桩/墙式充电设施、智能快充站、光伏充电站等;应用场景主要有:城市交通枢纽、商业区和购物中心、高速公路服务区、酒店和景区、企业和单位停车场、住宅小区、偏远地区和岛屿。",
+    6: "热能主要分为集中供热、余热利用;主要应用场景有:工业园区集中供热、CBD区域制冷和空调等工业余热利用。"
+  };
+
   const { getScrollTarget, setScrollPosition } = scroll
     
     import {QFlashcard, QFlashcardSection} from '@quasar/quasar-ui-qflashcard'
@@ -784,7 +800,9 @@ labore et dolore magna aliqua.
                 about_heading_3: [],
                 about_heading_color_1: '#424242',
                 about_heading_color_2: '#424242',
-                about_heading_color_3: '#424242'
+                about_heading_color_3: '#424242',
+                productdescriptions: productdescriptions,
+                productDetails: productDetails
             }
         },
         computed: {
@@ -880,7 +898,7 @@ labore et dolore magna aliqua.
     .my-text
       width: 100%
       top: 0
-      height: 90px
+      height: 130px
       color: white
       text-align: center
       font-size: 15px
